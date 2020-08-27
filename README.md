@@ -1,8 +1,8 @@
-## Foundation Tokens
+<!-- ## Foundation Tokens
 - Colors
 - Spacings [https://material-ui.com/customization/spacing/#spacing]
 - Typography 
-- Grid
+- Grid -->
 
 ## UI Components
 - Typography [https://material-ui.com/components/typography/#typography]

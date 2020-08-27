@@ -1,21 +1,19 @@
-// import Head from 'next/head'; 
-
 import Head from '../src/infra/components/Head';
+import Typography from '../src/components/foundation/Typography';
+import Header from '../src/patterns/Header';
+import Footer from '../src/patterns/Footer';
 
 export default function Home() {
   return (
     <div>
-      <Head />
-      <header>
-        Menu
-      </header>
+      <Head title="Home - DevSoutinho Site" />
+      <Header />
       <main>
-        Conteúdo unico de cada página
+        <Typography>
+          Conteúdo unico de cada página
+        </Typography>
       </main>
-
-      <footer>
-        Footer
-      </footer>
+      <Footer />
     </div>
   );
 }
