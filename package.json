@@ -7,11 +7,19 @@
     "start": "next start"
   },
   "dependencies": {
+    "apollo-server": "^2.17.0",
+    "apollo-server-lambda": "^2.17.0",
+    "apollo-server-micro": "^2.17.0",
+    "framer-motion": "^2.6.5",
+    "graphql": "^15.3.0",
+    "gray-matter": "^4.0.2",
     "next": "latest",
     "prop-types": "^15.7.2",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-is": "^16.8.0",
+    "remark": "^12.0.1",
+    "remark-html": "^12.0.0",
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
