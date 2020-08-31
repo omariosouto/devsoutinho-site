@@ -1,6 +1,6 @@
 ---
 status: 'published'
-title: 'Primeiro post do blog'
+title: 'Segundo post do blog'
 date: '2020-09-02'
 excerpt: 'Resumo do segundo post do blog'
 ---

@@ -18,13 +18,13 @@ export default async (req, res) => {
     const slug = postFilePath.replace('.md', '');
 
     const remarkHTML = await remark().use(html).process(post.content)
-    const content = remarkHTML.toString()
+    const content = remarkHTML.toString();
+    const { title, ...metadata } = post.data;
 
     return {
       slug,
-      metadata: {
-        ...post.data,
-      },
+      title,
+      metadata,
       content,
     };
   })
