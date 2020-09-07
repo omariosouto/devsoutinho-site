@@ -41,11 +41,22 @@ export const config = {
   }
 };
 
-export default new ApolloServer({ schema }).createHandler({
-  path: '/api/graphql',
-  playground: true,
-  tracing: true,
-});
+export default (req, res) => {
+  console.log('req', req);
+
+  new ApolloServer({
+    schema,
+    introspection: true,
+    playground: true,
+  }).createHandler({
+    path: '/api/graphql',
+  })(req,res);
+
+  // res.json({
+  //   hi: 'Mario',
+  //   env: process.env.NODE_ENV,
+  // })
+}
 
 /**
 ## Referências
