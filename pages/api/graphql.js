@@ -1,5 +1,4 @@
-import { ApolloServer, gql } from 'apollo-server-micro';
-
+import { ApolloServer, gql, makeExecutableSchema } from 'apollo-server-micro';
 
 // Vídeos 
 // Links
@@ -23,21 +22,18 @@ const resolvers = {
         {
           title: 'Mario',
           author: 'JavaScript in deep',
-        }
+        },
+        {
+          title: 'Bla',
+          author: 'Ruby in deep',
+        },
       ];
     }
   },
 };
 
-const server = new ApolloServer({
-  typeDefs: [
-    typeDefs
-  ],
-  resolvers,
-  playground: true,
-  tracing: true,
-});
 
+export const schema = makeExecutableSchema({ typeDefs, resolvers });
 
 export const config = {
   api: {
@@ -45,21 +41,15 @@ export const config = {
   }
 };
 
-const handler = server.createHandler({
-  cors: {
-    origin: '*',
-    credentials: true,
-  },
-  path: '/api/graphql/'
+export default new ApolloServer({ schema }).createHandler({
+  path: '/api/graphql',
+  playground: true,
+  tracing: true,
 });
-
-export default handler; 
 
 /**
 ## Referências
 
 - Como organizar?
   - https://www.apollographql.com/blog/how-to-build-graphql-servers-87587591ded5/
-
-
 */
