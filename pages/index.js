@@ -8,7 +8,7 @@ export default function Home() {
     <div>
       <Head title="Home - DevSoutinho Site" />
       <Header />
-      <a href="http://localhost:3000/api/graphql/"></a>
+      <a href="/api/graphql/">aaaaaa</a>
       <main>
         <Typography>
           Conteúdo unico de cada página
