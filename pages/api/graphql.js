@@ -32,20 +32,19 @@ const resolvers = {
   },
 };
 
-const server = new ApolloServer({
-  schema,
-  introspection: true,
-  playground: true,
-});
-
-
-export const schema = makeExecutableSchema({ typeDefs, resolvers });
-
 export const config = {
   api: {
     bodyParser: false
   }
 };
+
+export const schema = makeExecutableSchema({ typeDefs, resolvers });
+
+const server = new ApolloServer({
+  schema,
+  introspection: true,
+  playground: true,
+});
 
 export default (req, res) => {
   server.createHandler({
