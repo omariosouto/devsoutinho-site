@@ -32,6 +32,12 @@ const resolvers = {
   },
 };
 
+const server = new ApolloServer({
+  schema,
+  introspection: true,
+  playground: true,
+});
+
 
 export const schema = makeExecutableSchema({ typeDefs, resolvers });
 
@@ -42,11 +48,7 @@ export const config = {
 };
 
 export default (req, res) => {
-  new ApolloServer({
-    schema,
-    introspection: true,
-    playground: true,
-  }).createHandler({
+  server.createHandler({
     path: '/api/graphql/',
   })(req,res);
 }
@@ -56,4 +58,6 @@ export default (req, res) => {
 
 - Como organizar?
   - https://www.apollographql.com/blog/how-to-build-graphql-servers-87587591ded5/
+  - https://www.apollographql.com/docs/apollo-server/testing/graphql-playground/#enabling-graphql-playground-in-production
+  - https://www.apollographql.com/docs/apollo-server/api/apollo-server/#makeexecutableschema
 */
