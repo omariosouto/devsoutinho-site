@@ -1,26 +1,30 @@
-const puppeteer = require('puppeteer');
+// const puppeteer = require('puppeteer');
  
 
-export default async (req, res) => {
-  const browser = await puppeteer.launch({
-    args: [
-      '--no-sandbox',
-      '--disable-setuid-sandbox',
-    ],
-  });
-  const page = await browser.newPage();
+// export default async (req, res) => {
+//   const browser = await puppeteer.launch({
+//     args: [
+//       '--no-sandbox',
+//       '--disable-setuid-sandbox',
+//     ],
+//   });
+//   const page = await browser.newPage();
   
-  await page.goto('https://www.instagram.com/omariosouto/');
+//   await page.goto('https://www.instagram.com/omariosouto/');
   
-  const instagramProfilePic = await page.evaluate(() => {
-    return document.querySelector('[data-testid="user-avatar"]').src;
-  });
+//   const instagramProfilePic = await page.evaluate(() => {
+//     return document.querySelector('[data-testid="user-avatar"]').src;
+//   });
   
-  await browser.close();
+//   await browser.close();
 
-  res.send({
-    pics: [
-      instagramProfilePic,
-    ]
-  });
+//   res.send({
+//     pics: [
+//       instagramProfilePic,
+//     ]
+//   });
+// }
+
+export default (req,res) => {
+  res.json({ hello: 'world' })
 }
