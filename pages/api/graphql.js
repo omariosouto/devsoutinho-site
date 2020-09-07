@@ -47,7 +47,7 @@ export default (req, res) => {
     introspection: true,
     playground: true,
   }).createHandler({
-    path: '/api/graphql',
+    path: '/api/graphql/',
   })(req,res);
 }
 
