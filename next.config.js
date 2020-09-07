@@ -1,7 +1,7 @@
 module.exports = {
   // 1) https://nextjs.org/docs/api-reference/next.config.js/trailing-slash
   // https://webmasters.googleblog.com/2010/04/to-slash-or-not-to-slash.html
-  // trailingSlash: true,
+  trailingSlash: true,
   // 2) https://nextjs.org/docs/api-reference/next.config.js/redirects
   // https://moz.com/learn/seo/redirection
   async redirects() {
