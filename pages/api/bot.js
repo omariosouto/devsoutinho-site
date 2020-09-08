@@ -2,14 +2,12 @@ import chromium from 'chrome-aws-lambda';
 
 export default async (req, res) => {
   const browser = await chromium.puppeteer.launch({
-    // Required
     executablePath: await chromium.executablePath,
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    // // Optional
-    // args: chromium.args,
-    // defaultViewport: chromium.defaultViewport,
-    // headless: chromium.headless
-  });
+    args: chromium.args,
+    defaultViewport: chromium.defaultViewport,
+    headless: chromium.headless,
+});
+
 
   const page = await browser.newPage();
 
