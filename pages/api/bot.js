@@ -26,6 +26,7 @@ export default async (req, res) => {
       ]
     });
   } catch(err) {
+    console.error(err);
     res.send({
       err: err.messsage,
     });
