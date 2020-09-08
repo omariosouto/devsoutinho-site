@@ -6,22 +6,29 @@ export default async (req, res) => {
     args: chromium.args,
     defaultViewport: chromium.defaultViewport,
     headless: chromium.headless,
-});
-
-
-  const page = await browser.newPage();
-
-  await page.goto('https://www.instagram.com/omariosouto/');
-
-  const instagramProfilePic = await page.evaluate(() => {
-    return document.querySelector('[data-testid="user-avatar"]').src;
   });
 
-  await browser.close();
 
-  res.send({
-    pics: [
-      instagramProfilePic,
-    ]
-  });
+  try {
+    const page = await browser.newPage();
+  
+    await page.goto('https://www.instagram.com/omariosouto/');
+  
+    const instagramProfilePic = await page.evaluate(() => {
+      return document.querySelector('[data-testid="user-avatar"]').src;
+    });
+  
+    await browser.close();
+  
+    res.send({
+      pics: [
+        instagramProfilePic,
+      ]
+    });
+  } catch(err) {
+    res.send({
+      err: err.messsage,
+    });
+  }
+
 }
