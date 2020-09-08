@@ -5,7 +5,7 @@ export default async (req, res) => {
     executablePath: await chromium.executablePath,
     args: chromium.args,
     defaultViewport: chromium.defaultViewport,
-    headless: chromium.headless,
+    headless: true,
   });
 
 
