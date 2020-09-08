@@ -11,13 +11,14 @@
     "chrome-aws-lambda": "^5.2.1",
     "next": "latest",
     "prop-types": "^15.7.2",
-    "puppeteer": "^5.2.1",
+    "puppeteer-core": "^5.2.1",
     "react": "^16.8.0",
     "react-dom": "^16.8.0",
     "react-is": "^16.8.0",
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
+    "puppeteer": "^5.2.1",
     "babel-plugin-styled-components": "^1.8.0"
   },
   "license": "ISC"
