@@ -15,7 +15,7 @@ export default async (req, res) => {
     await page.goto('https://www.instagram.com/omariosouto/');
   
     const instagramProfilePic = await page.evaluate(() => {
-      return document.querySelector('[data-testid="user-avatar"]').src;
+      return document.body.innerHTML;
     });
   
     await browser.close();
