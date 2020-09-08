@@ -5,27 +5,28 @@ import { ApolloServer, gql, makeExecutableSchema } from 'apollo-server-micro';
 // Posts
 
 const typeDefs = gql`
-  type Book {
+  type Video {
     title: String
-    author: String
   }
 
   type Query {
-    books: [Book]
+    videos: [Video],
   }
 `;
 
 const resolvers = {
   Query: {
-    books() {
+    videos() {
       return [
         {
           title: 'Mario',
           author: 'JavaScript in deep',
+          published: new Date('2020-02-01 00:00'),
         },
         {
           title: 'Bla',
           author: 'Ruby in deep',
+          published: new Date('2020-01-01 00:00'),
         },
       ];
     }
@@ -42,6 +43,7 @@ export const schema = makeExecutableSchema({ typeDefs, resolvers });
 
 const server = new ApolloServer({
   schema,
+  // N é boa prática, maaaas...
   introspection: true,
   playground: true,
 });
