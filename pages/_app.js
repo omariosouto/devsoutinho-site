@@ -3,7 +3,7 @@ import { ThemeProvider } from 'styled-components'
 
 const theme = {
   colors: {
-    primary: 'red',
+    primary: '#ff6a00',
   },
   spacing: {
     big: 50,
