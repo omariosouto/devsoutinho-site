@@ -160,6 +160,7 @@ export async function getStaticProps()  {
   const posts = [
     {
       metadata: {
+        slug: 'desliza-a-cortina-em-cima-do-like',
         title: 'Desliza a cortina em cima do like',
         date: '2020-03-16',
         excerpt: 'Resumo do primeiro post'
@@ -168,6 +169,7 @@ export async function getStaticProps()  {
     },
     {
       metadata: {
+        slug: 'segundo-post',
         title: 'Segundo post',
         date: '2020-03-16',
         excerpt: 'Resumo do segundo post'
