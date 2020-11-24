@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { createGlobalStyle } from 'styled-components';
+import { getAllPosts } from '../scripts/blog/getAllPosts';
 
 import Head from '../src/infra/components/Head';
 // import Typography from '../src/components/foundation/Typography';
@@ -157,26 +158,7 @@ export default function Home({ posts }) {
 
 
 export async function getStaticProps()  {
-  const posts = [
-    {
-      metadata: {
-        slug: 'desliza-a-cortina-em-cima-do-like',
-        title: 'Desliza a cortina em cima do like',
-        date: '2020-03-16',
-        excerpt: 'Resumo do primeiro post'
-      },
-      content: 'Olar'
-    },
-    {
-      metadata: {
-        slug: 'segundo-post',
-        title: 'Segundo post',
-        date: '2020-03-16',
-        excerpt: 'Resumo do segundo post'
-      },
-      content: 'Olar'
-    }
-  ];
+  const posts = getAllPosts();
 
   return {
     props: {
