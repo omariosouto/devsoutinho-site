@@ -30,20 +30,16 @@ const GlobalStyle = createGlobalStyle`
     max-width: 700px;
     margin: auto;
   }
-  h2 {
-    background-color: var(--primary);
-    color: #fff;
-    padding: 3px 5px;
-    margin: 0;
-  }
-  
+
   h1,
+  h2,
   h3,
   h4,
   h5
   a {
     color: var(--primary);
   }
+
   button,
   a {
     transition: opacity .3s;
@@ -52,10 +48,20 @@ const GlobalStyle = createGlobalStyle`
       opacity: .5;
     }
   }
+  
   .postsContainer {
+    h1 {
+      font-size: 2em;
+      background-color: var(--primary);
+      color: #fff;
+      padding: 3px 5px;
+      margin: 0;
+      display: inline-block;
+    }
   }
   .postsContainer__post {
     a {
+      color: inherit;
       font-weight: bold;
       text-decoration: none;
     }
@@ -130,13 +136,14 @@ export default function Home({ posts }) {
       </header>
       
       <section className="postsContainer">
+        <h1>Posts</h1>
         {posts.map((post) => (
           <article key={post.metadata.title} className="postsContainer__post">
-            <a href="#">
-              <h2 style={{ display: 'inline-block' }}>
-                {post.metadata.title}
-              </h2>
-            </a>
+            <h2>
+              <a href="#">
+                  {post.metadata.title}
+              </a>
+            </h2>
             <p>
               {post.metadata.excerpt}
             </p>
