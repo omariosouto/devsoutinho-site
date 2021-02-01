@@ -1,18 +1,2 @@
-<!-- ## Foundation Tokens
-- Colors
-- Spacings [https://material-ui.com/customization/spacing/#spacing]
-- Typography 
-- Grid -->
-
-## UI Components
-- Typography [https://material-ui.com/components/typography/#typography]
-- Button
-- TextField
-
-## UI Patterns
-- Menu [https://material-ui.com/components/menus/#menus]
-- Footer
-
-## Infra
-- Head
-  - SEO
+## Meu site pessoal
+Site pessoal com blog, baseado no site que o Mario Souto fez pra eles [https://github.com/omariosouto/devsoutinho-site]
