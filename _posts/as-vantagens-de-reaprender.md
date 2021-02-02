@@ -2,6 +2,7 @@
 title: 'As vantagens de aprender, desaprender a reaprender'
 date: '23/10/2018'
 description: 'O analfabeto do século 21 não será aquele que não consegue ler e escrever, mas im aquele que não consegue aprender, desaprender e reaprender.'
+image: 'blog/as-vantagens-de-reaprender.png'
 ---
 
 > "O analfabeto do século 21 não será aquele que não consegue ler e escrever, mas sim aquele que não consegue aprender, desaprender e reaprender" — Alvin Toffler
