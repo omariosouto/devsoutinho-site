@@ -58,12 +58,41 @@ a:focus {
 
 .headerContainer img {
     max-width: 50px;
-    margin-right: 16px;
     transition: .2s all ease-in-out;
+    position: relative;
+}
+
+.headerContainer a.eu {
+    position: relative;
+    margin-right: 16px;
+}
+
+.headerContainer a.eu::before {
+    position: absolute;
+    content: " ";
+    display: block;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 1px;
+    height: 1px;
+    border-radius: 100%;
+    background-color: var(--primary);
+    transition: .2s all ease-in-out;
+}
+
+.headerContainer a:hover {
+    opacity: 1;
 }
 
 .headerContainer img:hover {
     transform: rotate(-20deg);
+    transition: .2s all ease-in-out;
+}
+
+.headerContainer a.eu:hover::before {
+    width: 80px;
+    height: 80px;
     transition: .2s all ease-in-out;
 }
 
@@ -128,14 +157,14 @@ span a {
 }
 
 .post-blog .content blockquote {
-    font-size: 2rem;
-    line-height: 2rem;
+    font-size: clamp(1.2rem, 4vw, 2rem);
+    line-height: clamp(1.2rem, 4vw, 2rem);
     color: #555;
     font-style: italic;
 }
 
 .post-blog .content blockquote p {
-    line-height: 2rem;
+    line-height: clamp(1.2rem, 4vw, 2rem);
 }
 
 .todosPosts {

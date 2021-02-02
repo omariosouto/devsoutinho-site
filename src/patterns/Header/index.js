@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 function Header({ children }) {
   return (
     <header className="headerContainer">
-      <a href="/"><img src="/eu.svg" /></a>
+      <a href="/" className="eu"><img src="/eu.svg" /></a>
       {children}
     </header>
   );
