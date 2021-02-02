@@ -10,12 +10,12 @@ export default function Home({ posts }) {
     <>
       <Head title="Gabriel Nunes — Blog" />
       <div className="container">
-        <Header />
+        <Header>
+          <h2>Blog do Gabriel Nunes</h2>
+        </Header>
 
-        <section className="about">
-          <h1>Blog</h1>
-        </section>
-
+        <br/>
+      
             {posts.map((post, index) => {
               return <p>
                 {post.metadata.date}
@@ -25,8 +25,10 @@ export default function Home({ posts }) {
                 </a>
               </p>
             })}
-         
 
+          <br/>
+         
+          &lsaquo; <a href="/">Voltar para a página inicial</a>
       </div>
     </>
   );
