@@ -1,0 +1,143 @@
+:root {
+    --primary: #FF5349;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #000;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: clamp(2rem, 10vw, 5rem);
+    max-width: 1000px;
+    margin: auto;
+}
+
+a {
+    color: var(--primary);
+}
+
+button,
+a {
+    transition: opacity .3s;
+}
+
+button:hover,
+button:focus,
+a:hover,
+a:focus {
+    opacity: .5;
+}
+
+.postsContainer h1 {
+    font-size: 2em;
+    background-color: var(--primary);
+    color: #fff;
+    padding: 3px 5px;
+    margin: 0;
+    display: inline-block;
+}
+.postsContainer__post a {
+    color: inherit;
+    font-weight: bold;
+    text-decoration: none;
+}
+.headerContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.headerContainer img {
+    max-width: 50px;
+    margin-right: 16px;
+    transition: .2s all ease-in-out;
+}
+
+.headerContainer img:hover {
+    transform: rotate(-20deg);
+    transition: .2s all ease-in-out;
+}
+
+.headerContainer h2 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+.about p {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: clamp(2rem, 5vw, 3rem);
+    margin: 0;
+}
+
+.details {
+    margin-top: 24px;
+}
+.details p {
+    margin: 0;
+    line-height: 1.6rem;
+}
+ 
+.headerDetails {
+    display: flex;
+    align-items: center;
+}
+
+.headerDetails img {
+    margin-right: 16px;
+}
+
+span a {
+    color: #fff;
+}
+
+.post-blog h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.post-blog hr {
+    width: 10%;
+    border-color: #333;
+}
+
+.post-blog .data {
+    text-align: center;
+}
+
+.post-blog .content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.post-blog .content p {
+    line-height: 1.6rem;
+}
+
+.post-blog .content li {
+    margin-bottom: 1.6rem;
+}
+
+.post-blog .content blockquote {
+    font-size: 2rem;
+    line-height: 2rem;
+    color: #555;
+    font-style: italic;
+}
+
+.post-blog .content blockquote p {
+    line-height: 2rem;
+}
+
+.todosPosts {
+    margin-left: auto;
+}

@@ -1,164 +1,69 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-import { getAllPosts } from '../scripts/blog/getAllPosts';
 
 import Head from '../src/infra/components/Head';
-// import Typography from '../src/components/foundation/Typography';
-// import Header from '../src/patterns/Header';
-// import Footer from '../src/patterns/Footer';
-// import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
-// import { getAllPosts } from '../scripts/posts/postsRepository';
-
-
-const GlobalStyle = createGlobalStyle`
-  :root {
-    --primary: ${({ theme }) => theme.colors.primary};
-  }
-  * {
-    font-family: sans-serif;
-    color: #333;
-    box-sizing: border-box;
-  }
-  
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  body {
-    padding-left: 16px;
-    padding-right: 16px;
-    max-width: 700px;
-    margin: auto;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5
-  a {
-    color: var(--primary);
-  }
-
-  button,
-  a {
-    transition: opacity .3s;
-    &:focus,
-    &:hover {
-      opacity: .5;
-    }
-  }
-  
-  .postsContainer {
-    h1 {
-      font-size: 2em;
-      background-color: var(--primary);
-      color: #fff;
-      padding: 3px 5px;
-      margin: 0;
-      display: inline-block;
-    }
-  }
-  .postsContainer__post {
-    a {
-      color: inherit;
-      font-weight: bold;
-      text-decoration: none;
-    }
-  }
-  .headerContainer {
-    display: flex;
-    align-items: center;
-    padding-top: 16px;
-    padding-bottom: 16px;
-    margin-bottom: 32px;
-    img {
-      max-width: 50px;
-      border-radius: 100%;
-      margin-right: 16px;
-    }
-    h1 {
-      margin: 0;
-    }
-  }
-`;
-
-// const fontSize = 30;
-
-// const Title = styled.h3`
-//   font-size: ${fontSize}px;
-//   a {
-//     color: ${({ theme }) => {
-//       return theme.colors.primary;
-//     }};
-//     text-decoration: none;
-//     &:hover {
-//       color: #666;
-//     }
-//   }
-// `;
-
-
-// const PostCardWrapper = styled.article`
-//   border: 1px solid orange;
-//   padding: ${({theme}) => theme.spacing.big}px;
-// `;
-
-// function Title({ children }) {
-//   return <h3>{children}</h3>
-// }
-
-// function PostCard() {
-//   return (
-//     <PostCardWrapper>
-//         <header>
-//           <Title>
-//             <a rel="bookmark" href="/the-wet-codebase/">Canal DevSoutinho</a>
-//           </Title>
-//           <small>???? 00, 2020 ☕️ 1 min read</small>
-//         </header>
-//         <p>Começando agora o CSS.</p>
-//     </PostCardWrapper>
-//   )
-// }
+import Header from '../src/patterns/Header';
+import Details from '../src/patterns/Details';
+import { getAllPosts } from '../scripts/blog/getAllPosts';
 
 export default function Home({ posts }) {
   return (
-    <div>
-      <GlobalStyle />
-      <Head title="Home - DevSoutinho Site" />
+    <>
+      <Head title="Gabriel Nunes" />
+      <div className="container">
+        <Header>
+          <h2>Olá mundo!</h2>
+        </Header>
 
-      <header className="headerContainer">
-        <img src="https://github.com/omariosouto.png" />
-        <h1>
-          DevSoutinho's Blog
-        </h1>
-      </header>
-      
-      <section className="postsContainer">
-        <h1>Posts</h1>
-        {posts.map((post) => (
-          <article key={post.metadata.title} className="postsContainer__post">
-            <h2>
-              <a href="#">
-                  {post.metadata.title}
-              </a>
-            </h2>
+        <section className="about">
+          <p>Meu nome é Gabriel Nunes. Trabalho como dev front-end no <a href="https://www.asaas.com/">Asaas</a>.</p>
+        </section>
+
+        <Details
+          icon="/hammer.png"
+          title="Algumas coisas que eu faço por aí:"
+        >
+          <p>Sou o responsável pela organização de dois eventos. Um evento de tecnologia, a <a href="https://codecon.dev">Codecon</a>, e um festival de criatividade, o <a href="https://shiftfestival.cc">Sh*ft Festival</a>. Também escrevo quinzenalmente uma newsletter com links sobre criatividade, tecnologia e inovação, é a Sh*ft Happens (<a href="https://shiftfestival.cc/news/">inscreva-se</a>).</p>
+        </Details>
+
+        {posts && (
+          <Details
+            icon="/writing-hand.png"
+            title="O que ando escrevendo:"
+          >
             <p>
-              {post.metadata.excerpt}
+            {posts.map((post, index) => {
+              return <span>
+                {(index ? ' / ' : '')}
+                <a href={`/blog/${post.metadata.slug}`}>
+                    {post.metadata.title}
+                </a>
+              </span>
+            })}
             </p>
-          </article>
-        ))}
-      </section>
-      {/* <Footer /> */}
-    </div>
+          </Details>
+        )}
+
+        <Details
+          icon="/test-tube.png"
+          title="Meu laboratório:"
+        >
+          <p>Aqui quero divulgar alguns experimentos que eu criar. Por enquanto você pode dar uma olhada no meu <a href="https://codepen.io/gabrnunes/">Codepen</a>.</p>
+        </Details>
+
+        <Details
+          icon="/call-me-hand.png"
+          title="Fale comigo:"
+        >
+          <p><a href="https://twitter.com/nunesgabriel">Manda um DM no Twitter</a>, um e-mail no <a href="mailto:gabriel@gnun.es">gabriel@gnun.es</a> ou dê uma olhada no <a href="https://github.com/gabrnunes">meu GitHub</a>.</p>
+        </Details>
+
+      </div>
+    </>
   );
 }
 
-
 export async function getStaticProps()  {
-  const posts = getAllPosts();
+  const posts = getAllPosts(5);
 
   return {
     props: {

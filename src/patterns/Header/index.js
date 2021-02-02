@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 
 function Header({ children }) {
   return (
-    <header>
-      Esse é o Header
+    <header className="headerContainer">
+      <a href="/"><img src="/eu.svg" /></a>
+      {children}
     </header>
   );
 }
