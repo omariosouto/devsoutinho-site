@@ -8,7 +8,7 @@ import { getAllPosts } from '../scripts/blog/getAllPosts';
 export default function Home({ posts }) {
   return (
     <>
-      <Head title="Gabriel Nunes" />
+      <Head title="Gabriel Nunes — dev e criativo" />
       <div className="container">
         <Header>
           <h2>Olá mundo!</h2>
@@ -39,6 +39,8 @@ export default function Home({ posts }) {
                 </a>
               </span>
             })}
+
+            / <a href="/blog">Todos os posts</a>
             </p>
           </Details>
         )}

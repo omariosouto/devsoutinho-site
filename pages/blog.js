@@ -8,7 +8,7 @@ import { getAllPosts } from '../scripts/blog/getAllPosts';
 export default function Home({ posts }) {
   return (
     <>
-      <Head title="Gabriel Nunes" />
+      <Head title="Gabriel Nunes — Blog" />
       <div className="container">
         <Header />
 

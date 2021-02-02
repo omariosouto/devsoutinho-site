@@ -10,7 +10,7 @@ export default function Home({ post }) {
 
     return (
         <>
-            <Head title="Gabriel Nunes" />
+            <Head title={`Gabriel Nunes — ${post.metadata.title}`} description={post.metadata.description} />
             <div className="container">
                 <Header>
                     <a href="/blog" className="todosPosts">todos os posts</a>

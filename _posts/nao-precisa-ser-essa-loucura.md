@@ -1,6 +1,7 @@
 ---
 title: 'Não precisa ser essa loucura no trabalho'
 date: '07/08/2018'
+description: 'Este texto traz algumas partes do livro "Rework", mostrando que você pode trabalhar bem, sem ser uma loucura.'
 ---
 
 Quando eu tiver uma empresa, era tudo uma loucura. Eu ficava trabalhando sem fim até de madrugada, não tinha horário para ir pra casa, trabalhava aos finais de semana e isso estava criando problemas na minha vida pessoal. Eu só trabalhava no método DCG*.
