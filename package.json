@@ -8,6 +8,7 @@
     "commit": "cz"
   },
   "dependencies": {
+    "apollo-server-micro": "^2.19.2",
     "gray-matter": "^4.0.2",
     "next": "10.0.0",
     "prop-types": "^15.7.2",
