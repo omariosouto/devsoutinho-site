@@ -32,15 +32,16 @@ export default function Home({ posts }) {
           >
             <p>
             {posts.map((post, index) => {
-              return <span>
-                {(index ? ' / ' : '')}
+              return <li key={`post-${index}`}>
+                <span>
                 <a href={`/blog/${post.metadata.slug}`}>
                     {post.metadata.title}
                 </a>
-              </span>
+                </span>
+              </li>
             })}
 
-            / <a href="/blog">Todos os posts</a>
+            <a href="/blog">Todos os posts</a>
             </p>
           </Details>
         )}

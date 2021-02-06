@@ -4,7 +4,13 @@ import remark from 'remark';
 import remarkHTML from 'remark-html';
 
 export function getAllPosts(limit = 0) {
-  let allPostsFileNames = fs.readdirSync('./_posts');
+  const dir = './_posts/';
+  let allPostsFileNames = fs.readdirSync(dir);
+
+  allPostsFileNames.sort(function(a, b) {
+    return fs.statSync(dir + b).mtime.getTime() - 
+           fs.statSync(dir + a).mtime.getTime();
+  });
   
   if (limit > 0) {
     allPostsFileNames = allPostsFileNames.slice(0, limit);
