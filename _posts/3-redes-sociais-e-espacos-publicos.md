@@ -1,6 +1,6 @@
 ---
 title: 'O que as redes sociais podem aprender com os espaços públicos?'
-date: '06/02/2020'
+date: '06/02/2021'
 description: 'O ideal é que toda rede social seja dividida em 4 blocos: boas-vindas, conexão, compreensão e ação.'
 image: 'blog/redes-sociais-e-espacos-publicos.png'
 ---
