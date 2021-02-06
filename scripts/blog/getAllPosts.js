@@ -8,8 +8,8 @@ export function getAllPosts(limit = 0) {
   let allPostsFileNames = fs.readdirSync(dir);
 
   allPostsFileNames.sort(function(a, b) {
-    return fs.statSync(dir + b).mtime.getTime() - 
-           fs.statSync(dir + a).mtime.getTime();
+    return fs.statSync(dir + a).mtime.getTime() - 
+           fs.statSync(dir + b).mtime.getTime();
   });
   
   if (limit > 0) {
