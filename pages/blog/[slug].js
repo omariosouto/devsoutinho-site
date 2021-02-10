@@ -1,5 +1,5 @@
 import React from 'react';
-import { useRouter } from 'next/router'
+import { Image } from 'next/image'
 
 import Head from '../../src/infra/components/Head';
 import Header from '../../src/patterns/Header';
@@ -20,6 +20,7 @@ export default function Home({ post }) {
                     <a href="/blog" className="todosPosts">todos os posts</a>
                 </Header>
                 <div className="post-blog">
+                   
                     <h1>{post.metadata.title}</h1>
 
                     <hr/>
@@ -27,6 +28,14 @@ export default function Home({ post }) {
                     <p className="data">{post.metadata.date} | por <a href="http://twitter.com/nunesgabriel">@nunesgabriel</a></p>
 
                     <hr/>
+
+                    <img 
+                        src={`/${post.metadata.image}`}
+                        alt={post.metadata.title}
+                        width="100%"
+                        className="post-img"
+                    />
+
                     <div className="content" dangerouslySetInnerHTML={{ __html: post.content }} />
                 </div>
             </div>

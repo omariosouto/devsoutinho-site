@@ -139,6 +139,11 @@ span a {
     border-color: #333;
 }
 
+.post-blog .post-img {
+    margin: 3rem 0;
+    max-width: 100%;
+}
+
 .post-blog .data {
     text-align: center;
 }
