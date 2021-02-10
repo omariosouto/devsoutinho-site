@@ -17,7 +17,7 @@ Também iremos abrir todos os detalhes financeiros do evento: valores de patroc�
 
 A comunidade pode participar ativamente do evento contribuindo ativamente, apenas sugerindo ideias e melhorias ou como voluntário. Para cada ação que a pessoa fizer ao evento, ela irá ganhar uma porcentagem em cima da divisão de lucros.
 
-Lá no GitHub também é onde organizaremos, de forma, aberta e colaborativa as próximas edições do evento: planejamento, palestrantes, orçamentos e tudo mais que o um evento precisa.
+Lá no GitHub também é onde organizaremos, de forma aberta e colaborativa, as próximas edições do evento: planejamento, palestrantes, orçamentos e tudo mais que o um evento precisa.
 
 No momento atual, o próximo passo é organizar a casa. Queremos realizar um evento digital ainda este ano e, logo que este momento ruim que estamos passar, voltar aos eventos presenciais em Joinville.
 
