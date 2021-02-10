@@ -11,11 +11,11 @@ O código aberto não é apenas permitir que as outras pessoas possam descobrir 
 
 ## Mas qual a ideia?
 
-Só que um evento open-source é meio maluco né? A ideia inicial é de abrir tudo, vamos criar um perfil no GitHub assim como outras empresas de software fazem. Lá estará a [documentação](https://github.com/shift-festival) do Sh*ft Festival, onde criaremos um modelo de como o evento deve funcionar. Será possível que as pessoas conheçam a essência do evento e tudo que é necessário para organizar um e como ajudar o evento de alguma forma.
+Só que um evento open-source é meio maluco né? A ideia inicial é de abrir tudo, vamos criar um perfil no GitHub assim como outras empresas de software fazem. Lá estará a [documentação](https://github.com/shift-festival) do Sh*ft Festival, onde criaremos um modelo de como o evento deve funcionar. Será possível que as pessoas conheçam a essência do evento e tudo que é necessário para organizá-lo e ajudar de alguma forma. 
 
-Também iremos abrir todos os detalhes financeiros do evento: valores de patrocínio, ingressos, faturamento, despesas. Tudo vai ficar aberto para que, quem participar, saiba onde o dinheiro está sendo usado. Se o evento der um resultado positivo, iremos guardar a maior parte do dinheiro para o caixa dos próximos eventos e dividir outra parte entre as pessoas que contribuíram de alguma forma.
+Também iremos abrir todos os detalhes financeiros do evento: valores de patrocínio, ingressos, faturamento, despesas. Tudo vai ficar aberto para que, quem participar, saiba onde o dinheiro está sendo usado. Se o evento der um resultado positivo, iremos guardar a maior parte do dinheiro para a execução de próximos eventos e dividir o restante entre as pessoas que colaboraram de alguma forma.
 
-A comunidade pode participar ativamente do evento contribuindo, como voluntário ou apenas sugerindo. Para cada ação que a pessoa fizer ao evento, ela irá ganhar uma porcentagem em cima da divisão de lucros.
+A comunidade pode participar ativamente do evento contribuindo, como voluntário ou apenas sugerindo ideias e melhorias. Para cada ação que a pessoa fizer ao evento, ela irá ganhar uma porcentagem em cima da divisão de lucros.
 
 Lá no GitHub também é onde organizaremos, de forma, aberta e colaborativa as próximas edições do evento: planejamento, palestrantes, orçamentos e tudo mais que o um evento precisa.
 
