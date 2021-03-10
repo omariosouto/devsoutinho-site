@@ -1,14 +1,9 @@
 import React from 'react';
-import styled, { createGlobalStyle } from 'styled-components';
-import { getAllPosts } from '../scripts/blog/getAllPosts';
+import PropTypes from 'prop-types';
+import { createGlobalStyle } from 'styled-components';
 
 import Head from '../src/infra/components/Head';
-// import Typography from '../src/components/foundation/Typography';
-// import Header from '../src/patterns/Header';
-// import Footer from '../src/patterns/Footer';
-// import { loadGetInitialProps } from 'next/dist/next-server/lib/utils';
-// import { getAllPosts } from '../scripts/posts/postsRepository';
-
+import { getAllPosts } from '../scripts/blog/getAllPosts';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -84,45 +79,6 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-// const fontSize = 30;
-
-// const Title = styled.h3`
-//   font-size: ${fontSize}px;
-//   a {
-//     color: ${({ theme }) => {
-//       return theme.colors.primary;
-//     }};
-//     text-decoration: none;
-//     &:hover {
-//       color: #666;
-//     }
-//   }
-// `;
-
-
-// const PostCardWrapper = styled.article`
-//   border: 1px solid orange;
-//   padding: ${({theme}) => theme.spacing.big}px;
-// `;
-
-// function Title({ children }) {
-//   return <h3>{children}</h3>
-// }
-
-// function PostCard() {
-//   return (
-//     <PostCardWrapper>
-//         <header>
-//           <Title>
-//             <a rel="bookmark" href="/the-wet-codebase/">Canal DevSoutinho</a>
-//           </Title>
-//           <small>???? 00, 2020 ☕️ 1 min read</small>
-//         </header>
-//         <p>Começando agora o CSS.</p>
-//     </PostCardWrapper>
-//   )
-// }
-
 export default function Home({ posts }) {
   return (
     <div>
@@ -130,19 +86,19 @@ export default function Home({ posts }) {
       <Head title="Home - DevSoutinho Site" />
 
       <header className="headerContainer">
-        <img src="https://github.com/omariosouto.png" />
+        <img alt="Mario Souto Foto" src="https://github.com/omariosouto.png" />
         <h1>
-          DevSoutinho's Blog
+          DevSoutinho Blog
         </h1>
       </header>
-      
+
       <section className="postsContainer">
         <h1>Posts</h1>
         {posts.map((post) => (
           <article key={post.metadata.title} className="postsContainer__post">
             <h2>
-              <a href="#">
-                  {post.metadata.title}
+              <a href="/#">
+                {post.metadata.title}
               </a>
             </h2>
             <p>
@@ -151,18 +107,25 @@ export default function Home({ posts }) {
           </article>
         ))}
       </section>
-      {/* <Footer /> */}
     </div>
   );
 }
 
+Home.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.shape({
+    metadata: PropTypes.shape({
+      title: PropTypes.string,
+      excerpt: PropTypes.string,
+    }),
+  })).isRequired,
+};
 
-export async function getStaticProps()  {
+export async function getStaticProps() {
   const posts = getAllPosts();
 
   return {
     props: {
-      posts
-    }
-  }
-} 
+      posts,
+    },
+  };
+}
