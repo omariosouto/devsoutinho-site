@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { createGlobalStyle } from 'styled-components';
 
 import Head from '../src/infra/components/Head';
-import { getAllPosts } from '../scripts/blog/getAllPosts';
+import { graphQLClient } from './api/graphql';
 
 const GlobalStyle = createGlobalStyle`
   :root {
@@ -121,11 +121,23 @@ Home.propTypes = {
 };
 
 export async function getStaticProps() {
-  const posts = getAllPosts();
+  const query = `
+    query {
+      posts {
+        metadata {
+          title
+          excerpt
+        }
+      }
+    }
+  `;
+
+  const { data } = await graphQLClient.executeOperation({ query });
+  console.log(data.posts);
 
   return {
     props: {
-      posts,
+      posts: data.posts,
     },
   };
 }
