@@ -33,7 +33,7 @@ export function getAllPosts() {
 
     return {
       metadata: {
-        ...parseMetadata,
+        ...metadata,
         slug: filename.replace('.md', ''),
       },
       content: htmlContent,
